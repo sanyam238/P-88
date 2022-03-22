@@ -2,7 +2,7 @@
 {
     background-position: center;
     background-size:contain;
-	background:url(Grass.jpg);
+	background:url("Grass.jpg");
 }
 #myCanvas
 {

@@ -9,8 +9,8 @@ hole_x=800;
 hole_y =400; 
 
 function load_img(){
-fabric.Image.fromUrl("golf-h.png",function (Img){
-hole_obj = Img;
+fabric.Image.fromURL("golf-h.png", function (Img)  {
+hole_obj = Img; 
 hole_obj.scaleToWidth(50);
 hole_obj.scaleToHeight(50);
 hole_obj.set({
@@ -24,7 +24,7 @@ canvas.add(hole_obj);
 
 function new_image()
 {
-	fabric.Image.fromUrl("ball.png",function (Img){
+	fabric.Image.fromURL("ball.png", function (Img){
 	ball_obj = Img;
 	ball_obj.scaleToWidth(50);
 	ball_obj.scaleToHeight(50);
@@ -96,7 +96,7 @@ document.getElementById("myCanvas").style.borderColor="red";
 	{
 		if(ball_x >5)
 		{
-			ball_x = ball_x + block_image_width;
+			ball_x = ball_x - block_image_width;
 			console.log("block image height = "+ block_image_height);
 			console.log("when down arrow is pressed, X = "+ball_x+"Y = "+ball_y);
 			canvas.remove(ball_obj);
@@ -108,7 +108,7 @@ document.getElementById("myCanvas").style.borderColor="red";
 	{
 		if(ball_x <=1050)
 		{
-			ball_x = ball_x - block_image_width;
+			ball_x = ball_x + block_image_width;
 			console.log("block image height = "+ block_image_height);
 			console.log("when down arrow is pressed, X = "+ball_x+"Y = "+ball_y);
 			canvas.remove(ball_obj);
